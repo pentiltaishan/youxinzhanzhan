@@ -1,1 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuoDuo Two Heroes - Epic Co-op Adventure Game | Play Free Online</title>
+    <meta name="description" content="Play DuoDuo Two Heroes, an exciting online co-op adventure game. Team up with a friend or play solo in this thrilling platformer featuring two brave heroes on an epic quest.">
+    <meta name="keywords" content="duoduotwoheroes, duo duo two heroes, online game, co-op game, adventure game, platformer, free game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://duoduotwoheroes.com/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="DuoDuo Two Heroes - Epic Co-op Adventure Game">
+    <meta property="og:description" content="Play DuoDuo Two Heroes online for free. An exciting co-op adventure platformer game.">
+    <meta property="og:url" content="https://duoduotwoheroes.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "DuoDuo Two Heroes",
+        "description": "An exciting online co-op adventure game featuring two brave heroes on an epic quest",
+        "url": "https://duoduotwoheroes.com/",
+        "genre": ["Adventure", "Platformer", "Co-op"],
+        "gamePlatform": "Web Browser",
+        "playMode": ["SinglePlayer", "CoOp"]
+    }
+    </script>
 
+    <style>
+        /* Apple-inspired color scheme */
+        :root {
+            --primary-blue: #007AFF;
+            --secondary-blue: #5856D6;
+            --success-green: #34C759;
+            --warning-orange: #FF9500;
+            --error-red: #FF3B30;
+            --gray-1: #8E8E93;
+            --gray-2: #AEAEB2;
+            --gray-3: #C7C7CC;
+            --gray-4: #D1D1D6;
+            --gray-5: #E5E5EA;
+            --gray-6: #F2F2F7;
+            --background: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #3C3C43;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Game Section */
+        .game-section {
+            padding: 40px 0;
+            background-color: var(--gray-6);
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: var(--gray-6);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--success-green), var(--primary-blue));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-blue);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .game-iframe {
+                height: 400px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .content-section {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .game-iframe {
+                height: 300px;
+            }
+
+            header {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>DuoDuo Two Heroes</h1>
+            <p class="tagline">Embark on an epic co-op adventure with two brave heroes in this thrilling online platformer game</p>
+        </div>
+    </header>
+
+    <!-- Game Section -->
+    <section class="game-section">
+        <div class="container">
+            <div class="game-container">
+                <iframe src="https://www.crazygames.com/embed/duo-kjn" class="game-iframe" allow="gamepad *;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>About DuoDuo Two Heroes</h2>
+            <div class="section-content">
+                <p>DuoDuo Two Heroes is an exciting online adventure platformer that brings together the classic elements of cooperative gameplay with modern game design. This captivating browser-based game features two unique heroes who must work together to overcome challenging obstacles, solve puzzles, and defeat enemies in their quest to save their magical kingdom.</p>
+                
+                <p>Whether you're playing solo by controlling both characters or teaming up with a friend for true cooperative gameplay, DuoDuo Two Heroes offers an engaging experience that combines skill, strategy, and teamwork. The game features beautifully crafted levels, smooth controls, and progressively challenging gameplay that keeps players coming back for more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Cooperative Gameplay</h3>
+                    <p class="feature-description">Play with a friend locally or control both heroes yourself in this unique dual-character platformer experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏰</div>
+                    <h3 class="feature-title">Epic Adventure</h3>
+                    <p class="feature-description">Explore diverse levels filled with challenging obstacles, hidden secrets, and epic boss battles.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h3 class="feature-title">Puzzle Elements</h3>
+                    <p class="feature-description">Solve creative puzzles that require coordination between both heroes to unlock new areas and progress.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Unique Abilities</h3>
+                    <p class="feature-description">Each hero possesses special abilities that complement each other, creating strategic gameplay opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>How to Play DuoDuo Two Heroes</h2>
+            <div class="section-content">
+                <p>Getting started with DuoDuo Two Heroes is simple and intuitive. The game can be played entirely in your web browser without any downloads or installations required. Use the arrow keys or WASD to control the first hero, while the second hero can be controlled with different key combinations for cooperative play.</p>
+                
+                <p>The objective is to guide both heroes through each level, working together to overcome obstacles, collect items, and reach the exit portal. Some challenges require precise timing and coordination between both characters, making communication essential when playing with a friend. Master the unique abilities of each hero and discover how their skills complement each other to tackle increasingly complex levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Play Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Why Play DuoDuo Two Heroes?</h2>
+            <div class="section-content">
+                <p>DuoDuo Two Heroes stands out in the crowded world of online games by offering a perfect blend of accessibility and depth. The game is completely free to play and runs smoothly on any modern web browser, making it accessible to players on desktop computers, laptops, tablets, and mobile devices.</p>
+                
+                <p>The cooperative gameplay mechanics encourage teamwork and communication, making it an excellent choice for friends, family members, or couples looking for a fun gaming experience to share together. The progressive difficulty curve ensures that both newcomers and experienced gamers will find appropriate challenges, while the charming art style and engaging soundtrack create an immersive gaming environment that appeals to players of all ages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Adventure?</h2>
+            <p>Join thousands of players who have already discovered the magic of DuoDuo Two Heroes. Start your epic journey today!</p>
+            <a href="#game" class="cta-button">Play Now - It's Free!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DuoDuo Two Heroes. All rights reserved. | Play responsibly and have fun!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.game-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation for iframe
+        const iframe = document.querySelector('.game-iframe');
+        iframe.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
